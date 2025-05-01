@@ -149,16 +149,16 @@ function IconContainer({ mouseX, title, icon, href }) {
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="relative flex aspect-square items-center justify-center rounded-full text-[#AC99FE] bg-[#1a1a1a] hover:text-white 
-                      hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
+        className="relative flex aspect-square items-center justify-center rounded-full text-[#AC99FE] bg-[#1a1a1a] hover:text-[#00cc96]"
       >
         <AnimatePresence>
           {hovered && (
             <motion.div
-              initial={{ opacity: 0, y: 10, x: "-50%" }}
-              animate={{ opacity: 1, y: 0, x: "-50%" }}
-              exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="absolute -top-8 left-1/2 w-fit rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs whitespace-pre text-neutral-700"
+              initial={{ opacity: 0, y: 8, scale: 0.8 }}
+              animate={{ opacity: 1, y: -10, scale: 1 }}
+              exit={{ opacity: 0, y: 8, scale: 0.8 }}
+              transition={{ duration: 0.2 }}
+              className="absolute -top-6 left-1/2 w-fit rounded-md bg-[#1a1a1a] px-2 py-0.5 text-xs whitespace-pre text-[#00cc96] transform -translate-x-1/2"
             >
               {title}
             </motion.div>
@@ -166,7 +166,7 @@ function IconContainer({ mouseX, title, icon, href }) {
         </AnimatePresence>
         <motion.div
           style={{ width: widthIcon, height: heightIcon }}
-          className="flex items-center justify-center"
+          className="flex items-center justify-center hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.8)]"
         >
           {icon}
         </motion.div>
