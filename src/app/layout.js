@@ -20,9 +20,9 @@ export default function RootLayout({ children }) {
       href: "/",
     },
     {
-      title: "Profile",
+      title: "About",
       icon: <IconUser className="h-full w-full" />,
-      href: "/profile",
+      href: "/about",
     },
     {
       title: "Projects",
