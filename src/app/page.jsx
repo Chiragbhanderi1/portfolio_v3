@@ -6,10 +6,11 @@ import { Testimonials } from "./_components/Testimonials";
 import { motion } from "motion/react";
 
 export default function Home() {
+  
   const testimonials = [
     {
       quote:
-        "It was nice working with chirag significantly improved our team's productivity. The intuitive interface makes complex tasks simple",
+        "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple",
       name: "Sachin Gondaliya",
       designation: "Freelancing Client",
       src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -18,7 +19,7 @@ export default function Home() {
       quote:
         "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
       name: "Bhargav Bhutani",
-      designation: "HR at Traskhym",
+      designation: "Working with Chirag on our Next.js project was a fantastic experience. His eye for design and ability to solve complex problems quickly made a real difference.",
       src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
@@ -53,7 +54,7 @@ export default function Home() {
       </div>
       <div className="max-w-4xl mx-auto mt-7 flex justify-between flex-col gap-2 bg-[#0f0f0f] rounded-[30px] p-6">
         <h3 className="text-xl flex items-center gap-2 ">
-          <PencilRuler className="h-4 w-4 text-[#00cc96]" /> Projects
+          <PencilRuler className="h-4 w-4 text-[#00cc96] " /> <p className=" text-white/50">Projects</p> 
         </h3>
         <ProjectCards />
         <div className="mt-2 group flex items-center justify-center gap-2 bg-[#1a1a1a] font-[400] rounded-[14px] py-2 px-4 text-[#AC99FE] cursor-pointer">
@@ -67,7 +68,8 @@ export default function Home() {
       <div className="max-w-4xl mx-auto mt-7 grid grid-cols-2 gap-4 ">
         <div className="w-full flex justify-between flex-col gap-6 bg-[#0f0f0f] rounded-[30px] p-6">
           <h3 className="text-xl flex items-center gap-2 ">
-            <Layers className="h-4 w-4 text-[#00cc96]" /> Stack
+            <Layers className="h-4 w-4 text-[#1edeab]" /> 
+            <p className=" text-white/50 ">Stack</p>
           </h3>
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-3">
@@ -80,7 +82,7 @@ export default function Home() {
                   alt="Stack"
                 />
               </div>
-              <p className="font-[500] ">Laravel</p>
+              <p className="font-[500]  text-white/50  ">Laravel</p>
             </div>
             <div className="flex items-center gap-3">
               <div className="rounded-[20px] p-4 bg-[#1a1a1a]">
@@ -92,7 +94,7 @@ export default function Home() {
                   alt="Stack"
                 />
               </div>
-              <p className="font-[500] ">React</p>
+              <p className="font-[500] text-white/50 ">React</p>
             </div>
             <div className="flex items-center gap-3">
               <div className="rounded-[20px] p-4 bg-[#1a1a1a]">
@@ -104,7 +106,7 @@ export default function Home() {
                   alt="Stack"
                 />
               </div>
-              <p className="font-[500] ">Zoho Creator</p>
+              <p className="font-[500]  text-white/50  ">Zoho Creator</p>
             </div>
           </div>
           <div className="mt-2 group flex items-center justify-center gap-2 bg-[#1a1a1a] font-[400] rounded-[14px] py-2 px-4 text-[#AC99FE] cursor-pointer">
@@ -143,7 +145,7 @@ export default function Home() {
       </div>
       <Testimonials testimonials={testimonials} />
       <div className="relative overflow-hidden max-w-4xl mx-auto mt-7 flex justify-center text-center flex-col gap-2 bg-[#0f0f0f] rounded-[30px] px-4 py-16 group">
-        <h1 className="text-9xl font-[500]">Let's Connect</h1>
+        <h1 className="text-9xl font-[500] text-amber-50">Let's Connect</h1>
         <a
           href="/contact"
           className="absolute left-0 w-full z-10 h-full flex items-center justify-center rounded-[30px] opacity-0 group-hover:opacity-100 transition-all duration-500"
