@@ -39,13 +39,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className} style={{ backgroundColor: "#050505" }}>
-        <div className="mb-28">
+        <div className="mb-28 mx-4 md:mx-8 lg:mx-16 xl:mx-24">
           <AnimatedWrapper>
             <Header />
             <main className="main-content">{children}</main>
-            <div className=" max-w-4xl mx-auto mt-7 flex justify-between  gap-2 bg-[#0f0f0f] text-white/60 font-light rounded-[30px] px-6 py-8 group">
-              <div>© 2025. All rights Reserved.</div>
-              <div>Made by Chirag </div>
+            <div className="max-w-4xl mx-auto mt-7 flex flex-col md:flex-row justify-between gap-4 bg-[#0f0f0f] text-white/60 font-light rounded-[30px] px-6 py-8 group">
+              <div className="text-center md:text-left">© 2025. All rights Reserved.</div>
+              <div className="text-center md:text-right">Made by Chirag</div>
             </div>
           </AnimatedWrapper>
           <div className="fixed inset-x-0 bottom-5 z-[999] flex items-center justify-center">
