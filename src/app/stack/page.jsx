@@ -73,7 +73,7 @@ export default function Stack() {
         </h3>
       </div>
       <div className="max-w-4xl mx-auto mt-7 flex justify-between flex-col gap-2 bg-[#0f0f0f] rounded-[30px] p-6">
-        <div className="grid grid-cols-2 gap-4  ">
+        <div className="grid sm:grid-cols-2 grid-cols-1 gap-4  ">
           {technologies.map((tech, index) => (
             <div className="flex items-center gap-3" key={index}>
               <div className="rounded-[20px] p-4 bg-[#1a1a1a] w-18 h-18 flex items-center justify-center">

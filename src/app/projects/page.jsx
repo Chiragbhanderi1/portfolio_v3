@@ -1,19 +1,25 @@
-import products from "./[projectName]/page";
+import Connect from "../_components/Connect";
+import products from "./products";
 
 export default function Project() {
   return (
     <>
-    <div className="max-w-4xl mx-auto mt-7 flex justify-between flex-col gap-2 bg-[#0f0f0f] rounded-[30px] p-6">
-      <h1 className="text-white text-5xl">Something I Have <span className="text-[#6e52ea]">Created</span></h1>
-    </div>
       <div className="max-w-4xl mx-auto mt-7 flex justify-between flex-col gap-2 bg-[#0f0f0f] rounded-[30px] p-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 mt-13 max-w-6xl mx-auto">
+        <h1 className="text-white text-5xl">
+          Something I Have {" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-tr to-purple-400 from-[#AC99FE]">
+            Created
+          </span>
+        </h1>
+      </div>
+      <div className="max-w-4xl mx-auto mt-7 flex justify-between flex-col gap-2 bg-[#0f0f0f] rounded-[30px] p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-20 gap-x-10 mt-13 max-w-6xl mx-auto">
           {products.map((product, index) => (
             <div
               key={index}
-              className="w-full bg-white rounded-[30px] shadow-lg transition-transform duration-300 hover:scale-105"
+              className="w-full bg-white rounded-[30px] shadow-lg transition-transform duration-300 hover:scale-102"
             >
-              <div className="p-5 bg-gradient-to-b from-blue-200 to-white">
+              <div className="p-5 bg-gradient-to-b from-[#beb0fb] to-white">
                 <img
                   src={product.thumbnail}
                   alt={`${product.title} Screenshot`}
@@ -29,7 +35,7 @@ export default function Project() {
                     href={product.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-500 text-sm hover:underline"
+                    className="text-[#AC99FE] text-sm hover:underline"
                   >
                     Visit
                   </a>
@@ -41,7 +47,7 @@ export default function Project() {
                   {product.tech.map((tech, techIndex) => (
                     <div
                       key={techIndex}
-                      className="w-8 h-8 rounded-full flex items-center justify-center overflow-hidden bg-white border border-gray-200"
+                      className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden bg-white border border-gray-200"
                     >
                       <img
                         src={`/assets/images/${tech}.png`}
@@ -56,6 +62,7 @@ export default function Project() {
           ))}
         </div>
       </div>
+      <Connect />
     </>
   );
 }

@@ -3,10 +3,11 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <div className="">
-      <div className="max-w-4xl mx-auto mt-7 flex justify-between items-center bg-[#0f0f0f] rounded-[30px] py-2 px-4">
-        <div className="flex items-center space-x-3">
-          <div className="rounded-[24px] overflow-hidden">
+    <header className="">
+      <div className="max-w-4xl bg-[#0f0f0f] mt-7 py-4 px-6 mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 rounded-[30px] shadow-lg">
+       
+        <div className="flex items-center space-x-4">
+          <div className="rounded-full overflow-hidden ">
             <Image
               src="/assets/images/face_image.jpeg"
               width={68}
@@ -15,8 +16,8 @@ export default function Header() {
               alt="Chirag Bhanderi"
             />
           </div>
-          <div className="flex flex-col items-start gap-1">
-            <h2 className="text-[#AC99FE] text-2xl font-[500]">
+          <div className="flex flex-col items-start">
+            <h2 className="text-[#AC99FE] text-2xl font-semibold">
               Chirag Bhanderi
             </h2>
             <h3 className="text-gray-400 text-sm font-light">
@@ -24,10 +25,14 @@ export default function Header() {
             </h3>
           </div>
         </div>
-        <div className="hidden md:flex items-center border border-[#00cc96] gap-2 rounded-[12px] py-1 px-2">
-          <span className="w-[6px] h-[6px] rounded-full bg-[#00cc96]"></span>
+
+        {/* Availability Badge */}
+        <div className="flex items-center border border-[#00cc96] gap-2 rounded-[12px] py-1 px-3 bg-[#1a1a1a] shadow-md">
+          <span className="w-[8px] h-[8px] rounded-full bg-[#00cc96]"></span>
           <p className="text-gray-300 text-sm font-light">Available for work</p>
         </div>
+
+        {/* Navigation Section */}
         <nav className="flex space-x-3">
           {[
             { Icon: Github, href: "https://github.com/Chiragbhanderi1", label: "GitHub" },
@@ -39,11 +44,12 @@ export default function Header() {
               key={index}
               href={href}
               target="_blank"
-              className="group relative flex items-center justify-center bg-[#1a1a1a] w-11 h-11 rounded-[14px] transition-all"
+              rel="noopener noreferrer"
+              className="group relative flex items-center justify-center bg-[#1a1a1a] w-12 h-12 rounded-full transition-all hover:bg-[#AC99FE] shadow-md"
               aria-label={label}
             >
               <Icon
-                className="w-4 h-4 text-[#AC99FE] transition-all duration-300 
+                className="w-5 h-5 text-[#AC99FE] transition-all duration-300 
                       group-hover:text-white 
                       group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
               />
@@ -51,6 +57,6 @@ export default function Header() {
           ))}
         </nav>
       </div>
-    </div>
+    </header>
   );
 }
