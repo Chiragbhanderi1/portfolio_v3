@@ -44,7 +44,7 @@ export default function Home() {
           my skills to create impactful, scalable solutions.
         </h3>
         <div className="mt-2 group flex items-center justify-center gap-2 bg-[#1a1a1a] font-[500] rounded-[14px] py-2 px-4 text-[#AC99FE] cursor-pointer">
-          More about me
+         <a href="/about">More about me</a> 
           <ArrowRight
             size={15}
             className="transition-transform duration-300 group-hover:translate-x-1"
@@ -58,7 +58,7 @@ export default function Home() {
         </h3>
         <ProjectCards />
         <div className="mt-2 group flex items-center justify-center gap-2 bg-[#1a1a1a] font-[400] rounded-[14px] py-2 px-4 text-[#AC99FE] cursor-pointer">
-          All Projects
+          <a href="/projects"> All Projects</a>
           <ArrowRight
             size={15}
             className="transition-transform duration-300 group-hover:translate-x-1"
