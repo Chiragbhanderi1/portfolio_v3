@@ -26,7 +26,7 @@ export default function Contact() {
               <span>cbhanderi666@gmail.com</span>
             </Link>
             <Link
-              href="https://x.com"
+              href="https://www.linkedin.com/in/chirag-bhanderi-595695231/"
               className="w-full flex items-center gap-2 bg-[#2F2F2F] py-3 px-4 rounded-lg text-gray-300 hover:bg-gray-700"
             >
               <Linkedin className="w-4 text-[#AC99FE]" />
