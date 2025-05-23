@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Nunito } from "next/font/google";
 import Header from "@/components/Header/Header";
 import BottomMenu from "@/components/BottomMenu/BottomMenu";
 import "./globals.css";
@@ -6,7 +6,12 @@ import { IconHome, IconUser } from "@tabler/icons-react";
 import { Layers, PencilRuler, Send } from "lucide-react";
 import AnimatedWrapper from "@/components/AnimatedWrapper/animatedWrapper";
 
-const inter = Inter({ subsets: ["latin"] });
+// Configure Nunito font with optional settings
+const nunito = Nunito({ 
+  subsets: ["latin"],
+  weight: ['400', '500', '700'], // Specify required weights
+  style: ['normal', 'italic'], // Include styles you need
+});
 
 export default function RootLayout({ children }) {
   const menuItems = [
@@ -27,7 +32,7 @@ export default function RootLayout({ children }) {
     },
     {
       title: "Stack",
-      icon: <Layers className="h-full w-full" />, //>,
+      icon: <Layers className="h-full w-full" />,
       href: "/stack",
     },
     {
@@ -38,7 +43,7 @@ export default function RootLayout({ children }) {
   ];
   return (
     <html lang="en">
-      <body className={inter.className} style={{ backgroundColor: "#050505" }}>
+      <body className={nunito.className} style={{ backgroundColor: "#050505" }}>
         <div className="mb-28 mx-4 md:mx-8 lg:mx-16 xl:mx-24">
           <AnimatedWrapper>
             <Header />
@@ -48,10 +53,10 @@ export default function RootLayout({ children }) {
               <div className="text-center md:text-right">Made by Chirag</div>
             </div>
           </AnimatedWrapper>
-          <div className="fixed inset-x-0 bottom-5 z-[999] flex items-center justify-center">
+          <div className="fixed inset-x-0 bottom-5 z-[49] flex items-center justify-center">
             <BottomMenu
               items={menuItems}
-              desktopClassName="shadow-lg dark:bg-neutral-800"
+              desktopClassName="shadow-lg"
               mobileClassName="fixed bottom-4 right-4"
             />
           </div>
