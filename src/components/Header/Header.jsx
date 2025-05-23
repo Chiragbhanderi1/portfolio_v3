@@ -51,7 +51,7 @@ export default function Header() {
               <Icon
                 className="w-5 h-5 text-[#AC99FE] transition-all duration-300 
                       group-hover:text-white 
-                      group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
+                      group-hover:drop-shadow-[0_0_16px_rgba(255,255,255)]"
               />
             </a>
           ))}

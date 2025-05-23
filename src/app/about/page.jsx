@@ -64,9 +64,8 @@ export default function About() {
         </h3>
       </div>
       <div className="max-w-4xl mx-auto mt-7 flex justify-between flex-col gap-2 bg-[#0f0f0f] rounded-[30px] p-6 overflow-visible">
-        <div className="flex items-center gap-2">
-          <BriefcaseBusiness className="text-[#00cc96] w-5" />
-          <h2 className="text-lg font-semibold text-white/60">Experience</h2>
+        <div className="flex items-center gap-2 text-xl">
+          <BriefcaseBusiness className="text-[#00cc96] w-5" /> Experience
         </div>
         <div>
           <ul className="space-y-5 px-2">
@@ -89,9 +88,8 @@ export default function About() {
         </div>
       </div>
       <div className="max-w-4xl mx-auto mt-7 flex justify-between flex-col gap-2 bg-[#0f0f0f] rounded-[30px] p-6 overflow-visible">
-        <div className="flex items-center gap-2">
-          <GraduationCap className="text-[#00cc96] w-5" />
-          <h2 className="text-lg font-semibold text-white/60">Education</h2>
+        <div className="flex items-center gap-2 text-xl">
+          <GraduationCap className="text-[#00cc96] w-5 " /> Education
         </div>
         <div>
           <ul className="space-y-5 px-2">

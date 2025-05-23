@@ -3,6 +3,7 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/utils/use-outside-click";
+import projects from "../projects/projects";
 
 export default function ProjectCards() {
   const [active, setActive] = useState(null);
@@ -66,7 +67,7 @@ export default function ProjectCards() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <img
@@ -83,29 +84,19 @@ export default function ProjectCards() {
                   <div className="">
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
-                      className="font-medium text-neutral-700 dark:text-neutral-200 text-base"
+                      className="font-medium text-neutral-200 text-base"
                     >
                       {active.title}
                     </motion.h3>
                     <motion.p
                       layoutId={`description-${active.description}-${id}`}
-                      className="text-neutral-600 dark:text-neutral-400 text-base"
+                      className="text-neutral-400 text-base"
                     >
                       {active.description}
                     </motion.p>
                   </div>
 
-                  <motion.a
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    href={active.ctaLink}
-                    target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-[#AC99FE] text-white"
-                  >
-                    {active.ctaText}
-                  </motion.a>
+                  
                 </div>
                 <div className="pt-4 relative px-4">
                   <motion.div
@@ -113,7 +104,7 @@ export default function ProjectCards() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
                     {typeof active.content === "function"
                       ? active.content()
@@ -126,12 +117,12 @@ export default function ProjectCards() {
         ) : null}
       </AnimatePresence>
       <ul className=" mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start gap-4">
-        {cards.map((card, index) => (
+        {projects.slice(0, 4).map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
             onClick={() => setActive(card)}
-            className="sm:p-4 flex flex-col  hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="sm:p-4 flex flex-col hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
             <div className="flex gap-4 flex-col  w-full">
               <motion.div layoutId={`image-${card.title}-${id}`}>
@@ -146,13 +137,13 @@ export default function ProjectCards() {
               <div className="flex justify-center items-center flex-col">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base"
+                  className="font-medium text-neutral-200 text-center md:text-left text-base"
                 >
                   {card.title}
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left text-base"
+                  className="text-neutral-400 text-center md:text-left text-base"
                 >
                   {card.description}
                 </motion.p>
@@ -198,134 +189,3 @@ export const CloseIcon = () => {
   );
 };
 
-const cards = [
-  {
-    description: "React",
-    title: "Citynect.in",
-    src: "/assets/images/citynect.png",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          Citynect is a modern real estate platform designed to simplify the
-          connection between property owners and tenants with minimal or no
-          brokerage involved. It offers a seamless, intuitive experience through
-          a clean, engaging user interface and a highly responsive user journey.
-          <br /> <br/>
-          Citynect enables property owners to <b>
-            register their properties
-          </b>{" "}
-          for sale or rent effortlessly. For users looking to <b>buy or rent</b>
-          , the platform provides an extensive listing of properties, making it
-          easy to find the perfect match. Additional features like{" "}
-          <b>bookmarking</b> and <b>reporting</b> empower users to keep track of
-          favorite properties or flag any concerns.
-          <br />
-          Access to detailed property information is available through a{" "}
-          <b>subscription-based model</b>, ensuring quality and serious
-          inquiries. Citynect also incorporates <b>map integration</b>, allowing
-          users to <b>view properties geographically</b> based on applied search
-          filters for better location context.
-          <br />
-          Moreover, the platform offers <b>smart suggestions</b> tailored to
-          each user's requirements, helping them discover the most suitable
-          options quickly and efficiently.
-          <br />
-          With its <b>modern UI</b>, <b>advanced search capabilities</b>, and{" "}
-          <b>personalized experience</b>, Citynect transforms the traditional
-          property discovery process into a streamlined and delightful journey.
-        </p>
-      );
-    },
-  },
-  {
-    description: "Laravel",
-    title: "Pretty Printers",
-    src: "/assets/images/pretty-printers.png",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          <b>Pretty Printers</b> is a comprehensive administrative platform
-          built to streamline the operations of printer services and new
-          equipment installations. Designed for both <b>admin</b> and{" "}
-          <b>staff users</b>, it empowers teams to efficiently handle daily
-          tasks, manage contracts, and oversee complete workflows.
-          <br /> <br/>
-          The system enables the creation of <b>professional Quotes</b> and{" "}
-          <b>Purchase Orders</b> with automated <b>PDF generation</b>. It also
-          features a dynamic <b>Dashboard</b> that highlights{" "}
-          <b>today's tasks</b> for staff, keeping operations organized and on
-          track.
-          <br />
-          With built-in <b>automation tools</b>, the platform can automatically
-          send quotes and purchase orders to clients, reducing manual effort and
-          increasing turnaround time. The system further manages the entire
-          lifecycle of <b>contracts</b> and <b>work orders</b>, making it an
-          essential tool for any organization involved in printer maintenance
-          and installation services.
-          <br />
-          <b>Key Features:</b>
-          <br />
-          - Admin and Staff roles
-          <br />
-          - Quote and Purchase Order PDF generation
-          <br />
-          - Dashboard with today’s tasks
-          <br />
-          - Automated sending of quotes and orders
-          <br />
-          - Full workflow management for contracts and work orders
-          <br />
-        </p>
-      );
-    },
-  },
-
-  {
-    description: "Metallica",
-    title: "For Whom The Bell Tolls",
-    src: "https://assets.aceternity.com/demos/metallica.jpeg",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          Metallica, an iconic American heavy metal band, is renowned for their
-          powerful sound and intense performances that resonate deeply with
-          their audience. Formed in Los Angeles, California, they have become a
-          cultural icon in the heavy metal music industry. <br /> <br />
-          Their songs often reflect themes of aggression, social issues, and
-          personal struggles, capturing the essence of the heavy metal genre.
-          With a career spanning over four decades, Metallica has released
-          numerous hit albums and singles that have garnered them a massive fan
-          following both in the United States and abroad.
-        </p>
-      );
-    },
-  },
-  {
-    description: "Lord Himesh",
-    title: "Aap Ka Suroor",
-    src: "https://assets.aceternity.com/demos/aap-ka-suroor.jpeg",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          Himesh Reshammiya, a renowned Indian music composer, singer, and
-          actor, is celebrated for his distinctive voice and innovative
-          compositions. Born in Mumbai, India, he has become a prominent figure
-          in the Bollywood music industry. <br /> <br />
-          His songs often feature a blend of contemporary and traditional Indian
-          music, capturing the essence of modern Bollywood soundtracks. With a
-          career spanning over two decades, Himesh Reshammiya has released
-          numerous hit albums and singles that have garnered him a massive fan
-          following both in India and abroad.
-        </p>
-      );
-    },
-  },
-];
