@@ -53,7 +53,7 @@ export default function Home() {
       </div>
       <div className="max-w-4xl mx-auto mt-7 flex justify-between flex-col gap-2 bg-[#0f0f0f] rounded-[30px] p-6">
         <h3 className="text-xl flex items-center gap-2 ">
-          <PencilRuler className="h-4 w-4 text-[#00cc96] " /> Projects
+          <PencilRuler className="h-4 w-4 text-[#00cc96] "/> Projects
         </h3>
         <ProjectCards />
         <a
