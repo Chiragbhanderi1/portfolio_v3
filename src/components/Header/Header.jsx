@@ -38,7 +38,7 @@ export default function Header() {
             { Icon: Github, href: "https://github.com/Chiragbhanderi1", label: "GitHub" },
             { Icon: Linkedin, href: "https://www.linkedin.com/in/chirag-bhanderi-595695231/", label: "LinkedIn" },
             { Icon: CircleUserRound, href: "https://www.upwork.com/freelancers/~01f05812283d395b43", label: "Upwork" },
-            { Icon: FileText, href: "https://drive.google.com/file/d/1Q2dG3MrQprz_qfeOecoLCJqjQ8bG-mbI/view?usp=drive_link", label: "Resume" },
+            { Icon: FileText, href: "https://drive.google.com/file/d/1J6rbSiE3P9hXUY-96xiPo6dP4en5Aai2/view?usp=sharing", label: "Resume" },
           ].map(({ Icon, href, label }, index) => (
             <a
               key={index}

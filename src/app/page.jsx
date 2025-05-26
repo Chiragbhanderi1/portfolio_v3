@@ -136,7 +136,7 @@ export default function Home() {
           </div>
           <a
             target="_blank"
-            href="https://drive.google.com/file/d/1Q2dG3MrQprz_qfeOecoLCJqjQ8bG-mbI/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1J6rbSiE3P9hXUY-96xiPo6dP4en5Aai2/view?usp=sharing"
             className="mt-2 group flex items-center justify-center gap-2 bg-[#1a1a1a] font-[400] rounded-[14px] py-2 px-4 text-[#AC99FE] cursor-pointer"
           >
             Google Drive Link
