@@ -12,6 +12,13 @@ const nunito = Nunito({
   weight: ['400', '500', '700'], // Specify required weights
   style: ['normal', 'italic'], // Include styles you need
 });
+export const metadata = {
+  title: "Chirag Bhanderi", // Change this to your desired title
+  description: "Chirag bhanderi's portfolio", // Optional description
+  icons: {
+    icon: "/assets/images/favicon.png",
+  },
+};
 
 export default function RootLayout({ children }) {
   const menuItems = [
@@ -41,6 +48,7 @@ export default function RootLayout({ children }) {
       href: "/contact",
     },
   ];
+  
   return (
     <html lang="en">
       <body className={nunito.className} style={{ backgroundColor: "#050505" }}>
