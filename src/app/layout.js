@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={nunito.className} style={{ backgroundColor: "#050505" }}>
-        <div className="mb-28 mx-4 md:mx-8 lg:mx-16 xl:mx-24">
+        <div className="mb-28 mx-4 md:mx-8 lg:mx-16 xl:mx-24 text-white">
           <AnimatedWrapper>
             <Header />
             <main className="main-content">{children}</main>
