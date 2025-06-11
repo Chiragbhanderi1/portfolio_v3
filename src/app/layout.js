@@ -5,7 +5,7 @@ import "./globals.css";
 import { IconHome, IconUser } from "@tabler/icons-react";
 import { Layers, PencilRuler, Send } from "lucide-react";
 import AnimatedWrapper from "@/components/AnimatedWrapper/animatedWrapper";
-
+import { Analytics } from "@vercel/analytics/next"
 // Configure Nunito font with optional settings
 const nunito = Nunito({ 
   subsets: ["latin"],
