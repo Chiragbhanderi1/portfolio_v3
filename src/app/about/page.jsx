@@ -64,7 +64,7 @@ export default function About() {
         </h3>
       </div>
       <div className="max-w-4xl mx-auto mt-7 flex justify-between flex-col gap-2 bg-[#0f0f0f] rounded-[30px] p-6 overflow-visible">
-        <div className="flex items-center gap-2 text-xl">
+        <div className="flex items-center gap-2 text-xl text-white`">
           <BriefcaseBusiness className="text-[#00cc96] w-5" /> Experience
         </div>
         <div>
@@ -88,7 +88,7 @@ export default function About() {
         </div>
       </div>
       <div className="max-w-4xl mx-auto mt-7 flex justify-between flex-col gap-2 bg-[#0f0f0f] rounded-[30px] p-6 overflow-visible">
-        <div className="flex items-center gap-2 text-xl">
+        <div className="flex items-center gap-2 text-xl text-white">
           <GraduationCap className="text-[#00cc96] w-5 " /> Education
         </div>
         <div>

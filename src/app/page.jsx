@@ -69,7 +69,7 @@ export default function Home() {
       </div>
       <div className="max-w-4xl mx-auto mt-7 grid md:grid-cols-2 grid=cols-1 gap-4 ">
         <div className="w-full flex justify-between flex-col gap-6 bg-[#0f0f0f] rounded-[30px] p-6">
-          <h3 className="text-xl flex items-center gap-2 ">
+          <h3 className="text-xl flex items-center gap-2 text-white">
             <Layers className="h-4 w-4 text-[#1edeab]" /> Stack
           </h3>
           <div className="flex flex-col gap-2">
@@ -122,7 +122,7 @@ export default function Home() {
           </a>
         </div>
         <div className="flex justify-between flex-col gap-6 bg-[#0f0f0f] rounded-[30px] p-6">
-          <h3 className="w-full text-xl flex items-center gap-2 ">
+          <h3 className="w-full text-xl flex items-center gap-2 text-white">
             <FileText className="h-4 w-4 text-[#00cc96]" /> Resume
           </h3>
           <div className="flex items-center justify-center w-full h-full bg-gradient-to-r from-[#93c5fd] via-[#60a5fa] to-[#3b82f6] rounded-[20px] px-4 py-2">
